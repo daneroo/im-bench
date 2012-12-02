@@ -1,0 +1,11 @@
+Wrote 16777216000 bytes in 95.818s using 4096 byte buffers: 166.98323905737962 mB/s
+Wrote 16777216000 bytes in 58.879s using 8192 byte buffers: 271.7437456478541 mB/s
+Wrote 16777216000 bytes in 60.501s using 16384 byte buffers: 264.4584387034925 mB/s
+Wrote 16777216000 bytes in 61.291s using 32768 byte buffers: 261.04974629227786 mB/s
+Wrote 16777216000 bytes in 61.493s using 65536 byte buffers: 260.192217000309 mB/s
+Read 16777216000 bytes in 130.648s using 4096 byte buffers: 122.46647480252281 mB/s
+Read 16777216000 bytes in 91.812s using 8192 byte buffers: 174.2691587156363 mB/s
+Read 16777216000 bytes in 75.959s using 16384 byte buffers: 210.63995049961161 mB/s
+Read 16777216000 bytes in 67.535s using 32768 byte buffers: 236.9141926408529 mB/s
+Read 16777216000 bytes in 61.507s using 65536 byte buffers: 260.1329929926675 mB/s
+All done!
