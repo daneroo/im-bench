@@ -2,14 +2,14 @@ var fs = require('fs');
 var util = require('util');
 var Buffer = require('buffer').Buffer;
 
-var path = "/tmp/wt.dat";
-var tsize = 1000 * 1048576;
-var bsizes = [1024, 4096, 8192, 16384, 32768, 65536];
+var path = "/Volumes/SSDVM//wt.dat";
+var tsize = 16 * 1000 * 1048576;
+var bsizes = [/*1024,*/ 4096, 8192, 16384, 32768, 65536];
 
 function bufit(size) {
   var buf = new Buffer(size);
   for (var i = 0; i <buf.length ; i += 1) {
-    buf[i] = 33;
+      buf[i] = 0;//33;
   }
   return buf;
 }
@@ -43,7 +43,7 @@ function writetest(size, bsize) {
 
   s.on('drain', function () {
     dowrite();
-    if (c++ % 2000 == 0) util.print(".");
+    if (c++ % 8096 == 0) util.print(".");
   });
 
   dowrite();
@@ -66,7 +66,7 @@ function wt(tsize, bsize, done) {
   s.addListener('close', function() {
     var end = Date.now();
     var diff = end - start;
-    console.log('Wrote '+ tsize +' bytes in '+  diff/1000 +'s using '+ bsize +' byte buffers: '+  ((tsize/(diff/1000)) / 1048576) +' mB/s');
+    console.log('\nWrote '+ tsize +' bytes in '+  diff/1000 +'s using '+ bsize +' byte buffers: '+  ((tsize/(diff/1000)) / 1048576) +' mB/s');
     done();
   });
 }
